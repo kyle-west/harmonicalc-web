@@ -13,54 +13,56 @@
   <div class="center">
     <div class="calculator">
       <div class="header">
-        <input type="text" name="omnibox" id="omnibox" value="45"/>
+        <input type="text" name="omnibox" id="omnibox" autofocus/>
       </div>
       <div class="buttons">
         <div class="row">
-          <button class="button bin" id="type-bin">BIN</button>
-          <button class="button hex" id="type-hex">HEX</button>
-          <button class="button" id="type-dec">DEC</button>
-          <button class="button" id="clear">Clear</button>
+          <button id="clear">Clear</button>
+          <button class="operator" id="divide" data-value=" / ">&divide;</button>
+          <button class="operator" id="multiply" data-value=" * ">&times;</button>
+          <button class="operator" id="add" data-value=" + ">&plus;</button>
+          <button class="operator" id="subtract" data-value=" - ">&minus;</button>
         </div>
         <div class="row">
-          <button class="button bw-operator" id="modulo">%</button>
-          <button class="button bw-operator" id="bw-and">&amp;</button>
-          <button class="button bw-operator" id="bw-or">|</button>
-          <button class="button bw-operator" id="bw-xor">^</button>
+          <button class="bw operator" id="and" data-value=" & ">AND</button>
+          <button class="bw operator" id="or" data-value=" | ">OR</button>
+          <button class="bw operator" id="xor" data-value=" ^ ">XOR</button>
+          <button class="bw operator" id="modulo" data-value=" % ">MOD</button>
         </div>
         <div class="row">
-          <button class="button operator" id="divide">&divide;</button>
-          <button class="button operator" id="multiply">&times;</button>
-          <button class="button operator" id="add">&plus;</button>
-          <button class="button operator" id="subtract">&minus;</button>
+          <button id="seven" data-value="7">7</button>
+          <button id="eight" data-value="8">8</button>
+          <button id="nine" data-value="9">9</button>
+          <button class="hex" id="a" data-value="A">A</button>
+          <button class="hex" id="b" data-value="B">B</button>
         </div>
         <div class="row">
-          <button class="button" id="seven">7</button>
-          <button class="button" id="eight">8</button>
-          <button class="button" id="nine">9</button>
-          <button class="button hex" id="hex-a">A</button>
-          <button class="button hex" id="hex-b">B</button>
+          <button id="four" data-value="4">4</button>
+          <button id="five" data-value="5">5</button>
+          <button id="six" data-value="6">6</button>
+          <button class="hex" id="c" data-value="C">C</button>
+          <button class="hex" id="d" data-value="D">D</button>
         </div>
         <div class="row">
-          <button class="button" id="four">4</button>
-          <button class="button" id="five">5</button>
-          <button class="button" id="six">6</button>
-          <button class="button hex" id="hex-c">C</button>
-          <button class="button hex" id="hex-d">D</button>
+          <button class="bin" id="one" data-value="1">1</button>
+          <button id="two" data-value="2">2</button>
+          <button id="three" data-value="3">3</button>
+          <button class="hex" id="e" data-value="E">E</button>
+          <button class="hex" id="f" data-value="F">F</button>
         </div>
         <div class="row">
-          <button class="button bin" id="one">1</button>
-          <button class="button" id="two">2</button>
-          <button class="button" id="three">3</button>
-          <button class="button hex" id="hex-e">E</button>
-          <button class="button hex" id="hex-f">F</button>
+          <button class="bin" id="zero" data-value="0">0</button>
+          <button class="operator" id="openExpr" data-value="(">(</button>
+          <button class="operator" id="closeExpr" data-value=")">)</button>
+          <button class="bin" id="prefixBIN" data-value="0b">0b</button>
+          <button class="hex" id="prefixHEX" data-value="0x">0x</button>
         </div>
         <div class="row">
-          <button class="button bin" id="zero">0</button>
-          <button class="button operator" id="open-expr">(</button>
-          <button class="button operator" id="close-expr">)</button>
-          <button class="button" id="backspace">&larr;</button>
-          <button class="button" id="equals">=</button>
+          <button class="bin" id="typeBIN">BIN</button>
+          <button id="typeDEC">DEC</button>
+          <button class="hex" id="typeHEX">HEX</button>
+          <button id="backspace">&larr;</button>
+          <button id="equals">=</button>
         </div>
     </div>
   </div>

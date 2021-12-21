@@ -113,6 +113,7 @@ body {
   border-radius: 4px;
   box-shadow: var(--shadow-elevation-medium);
   transition: box-shadow 0.1s ease-in-out, filter 0.2s ease-in-out;
+  flex: 1;
 }
 .buttons button:hover {
   filter: brightness(1.35);
@@ -125,7 +126,7 @@ button.operator {
   background-color: #486680;
   color: white;
 }
-button.bw-operator {
+button.bw.operator {
   background-color: #484c80;
   color: white;
 }
@@ -141,4 +142,8 @@ button#backspace {
 }
 button#equals {
   background-color: #2a3d25;
+}
+button#clear,
+button#equals {
+  flex: 2;
 }
