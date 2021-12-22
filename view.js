@@ -69,16 +69,26 @@ function applySideEffects(evt) {
 
 buttons.equals.addEventListener('click', execute);
 buttons.clear.addEventListener('click', () => clear());
+buttons.backspace.addEventListener('click', () => {
+  if (cursorPosition > 0) {
+    omnibox.value = omnibox.value.slice(0, cursorPosition - 1) + omnibox.value.slice(cursorPosition);
+    cursorPosition--;
+  }
+})
 queryButtons('[data-value]').forEach(
   btn => btn.addEventListener('click', typeChar(btn.dataset.value))
 );
 buttons.typeHEX.addEventListener('click', () => {
   execute()
-  omnibox.value = `0x${Number(omnibox.value).toString(16)}`;
+  if (omnibox.value.trim()) {
+    omnibox.value = `0x${Number(omnibox.value).toString(16)}`;
+  }
 })
 buttons.typeBIN.addEventListener('click', () => {
   execute()
-  omnibox.value = `0b${Number(omnibox.value).toString(2)}`;
+  if (omnibox.value.trim()) {
+    omnibox.value = `0b${Number(omnibox.value).toString(2)}`;
+  }
 })
 buttons.typeDEC.addEventListener('click', () => execute())
 
